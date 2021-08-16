@@ -1,0 +1,352 @@
+/* ---- MAIN STYLES ---- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fafafa;
+    font-weight: 300;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav,
+header,
+.card-deck,
+.skills-deck,
+#skills,
+#contact,
+.card,
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    font-size: .8rem;
+    margin: auto;
+    margin-top: 20px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color:rgba(112, 112, 112, 0.418);
+}
+
+.navbar {
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    height: 250px;
+}
+
+.navbar a {
+    background-color: #FFFFFF;
+    /* height: auto; */
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    margin-top: 50px;
+    text-align: center;
+    line-height: 1.4em;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+header img {
+    width: 60vw;
+    margin: auto;
+}
+
+header p {
+    margin: 20px;
+}
+
+#span1 {
+    color: red;
+}
+
+.card img {
+    width: 100%;
+}
+
+#portfolio,
+#skills {
+    background-color: #FFFFFF;
+    text-align: center;
+    line-height: 1.4em;
+}
+
+#skills {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    height: auto;
+}
+
+.skills-deck {
+    align-items: center;
+    text-align: center;
+    height: 400px;
+    justify-content: space-between;
+}
+
+.skill-card {
+    width: 100%;
+    height: auto;
+    color: white;
+    font-family: 'Space Mono', monospace;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-style: italic;
+    justify-content: center;
+    margin: auto;
+}
+
+.skill-card h3 {
+    margin: auto;
+    min-width: 152px;
+    border-radius: 20%/50%;
+}
+
+.skill1 {
+    background-color: #e0ab26;
+}
+
+.skill2 {
+    background-color: #e67670;
+}
+
+.skill3 {
+    background-color: #36acd0;
+}
+
+.skill4 {
+    background-color: #63b879;
+}
+
+.skill5 {
+    background-color: #917154;
+}
+
+#contact {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+.section-name {
+    font-size: 1em;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+.card-deck {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card {
+    text-align: center;
+    margin-bottom: 30px;
+    width: auto;
+}
+
+#contact {
+    color: rgb(60, 60, 60);
+    margin-bottom: 60px;
+}
+
+#contact h2 {
+    margin-bottom: 25px;
+}
+
+#contact span {
+    font-weight: 700;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px 6px;
+    border-top: 1px solid rgba(180, 180, 180, 0.685);
+}
+
+#foot-name {
+    width: auto;
+}
+
+.back-to-top {
+    font-size: .9rem;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footnav {
+    display: none;
+    justify-content: space-between;
+}
+
+.footnav a {
+    height: auto;
+    width: auto;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 20px;
+}
+
+/* ---- MEDIA QUERIES ---- */
+
+@media (min-width: 768px) {
+    .navbar,
+    header,
+    #portfolio,
+    .card-deck,
+    .skills-deck {
+        flex-direction: row;
+    }
+    
+    nav {
+        height: 100px;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .navbar {
+        flex-direction: row;
+        width: 500px;
+    }
+
+    .navbar a {
+        background-color: #FAFAFA;
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+    header img {
+        order: 1;
+    }
+
+    header p {
+        flex-grow: 3;
+        text-align: left;
+    }
+
+    #span1 {
+        color: black;
+    }
+
+    #span2 {
+        color: red;
+    }
+
+    .card-deck {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card {
+        flex-basis: 48%;
+    }
+
+    .skills-deck {
+        justify-content: space-evenly;
+        width: 90%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .skill-card {
+        width: auto;
+        flex-basis: 17%;
+        border-radius: 20%/50%;
+    }
+
+    .back-to-top {
+        display: none;
+    }
+
+    .footnav {
+        display: flex;
+        width: auto;
+        flex-direction: row;
+        align-items: baseline;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    h1 {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .navbar {
+        height: 25px;
+        width: auto;
+        margin-right: 0;
+        margin-top: 2px;
+    }
+
+    #span2 {
+        color: black;
+    }
+
+    #span3 {
+        color: red;
+    }
+
+    .card {
+        flex-basis: 31.5%;
+    }
+
+    .skill-card {
+        flex-basis: 18%;
+    }
+}
